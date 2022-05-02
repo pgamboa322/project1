@@ -5,8 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
-    
+    <div>
+        <h2>Movie Services</h2>
+        <button id="fetchTitleBtn">Find a Film</button>
+        <ul class="movieResult" id="movie-list">
+            <li class="movieChoice"></li>
+        </ul>
+    </div>
+
+    <div id="response"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="../project1/assets/js/script.js"></script>
+    <script src="https://api.watchmode.com/v1/list-titles/?apiKey=iz9NkyrVvBW1tKCzczoBIdy9CJB21p4ZR3moNFp0&source_ids=203,57"></script>
 </body>
 </html>
