@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Undecided?</title>
-    <link rel="stylesheet" src ="assets/css/style.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" src ="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="./assets/images/dinner:movie.png">
 </head>
 <body>
@@ -28,7 +29,7 @@
     </header>
       <!-- hero-->
     <section>
-        <div class="">
+        <div class="image is-16by9">
             <img src="./assets/images/maxresdefault.jpg">
         </div>
     </section>
@@ -48,24 +49,82 @@
     </section>
 
       <!-- Dinner section-->
-    <section class="section is-medium has-background-primary-dark has-text-grey-darker" id="dinner">
-        <div class="block">
-            <h2>Dinner
+    <section class="section is-small has-background-primary-dark has-text-grey-darker" id="dinner">
+        <div class="column is-5 has-text-white is-size-4 has-text-centered">
+            <h2>To get started with dinner, simply click the get recipe button! If it happens to be 
+                a recipe you are not interested in, click try another. 
             </h2>
         </div>
+        <!-- recipe selector-->
+        <div class="card column is-5 is-offset-6">
+            <header class="card-header">
+              <p class="card-header-title is-centered">
+                Recipe Selector
+              </p>
+              <button class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </header>
+            <div class="card-image">
+                <figure class="image is-3by1">
+                  <img src="./assets/images/images.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">Get Recipe</a>
+              <a href="#" class="card-footer-item">Try Another</a>
+            </footer>
+          </div>
     </section>
 
       <!-- Movie section-->
-      <section class="section is-medium has-background-dark has-text-white" id="movie">
-        <div class="block has-background-dark has-text-white">
-            <h2>Movie
+      <section class="section is-small" id="movie">
+        <div class="is-size-4 has-text-centered column is-5 is-offset-6">
+            <h2>To get started with your movie, simply click the get movie button! If it happens to be 
+                a movie you are not interested in, click try another.
             </h2>
         </div>
+        <!-- Movie selector-->
+        <div class="card column is-5">
+            <header class="card-header">
+              <p class="card-header-title is-centered">
+                Movie Selector
+              </p>
+              <button class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </header>
+            <div class="card-image">
+                <figure class="image is-3by1">
+                  <img src="./assets/images/download.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <br>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">Get Movie</a>
+              <a href="#" class="card-footer-item">Try Another</a>
+            </footer>
+          </div>
     </section>
 
     <!-- footer -->
-    <footer class="footer has-background-grey-light has-text-white" id="about-us">
-        <div class="content has-text-centered">
+    <footer class="footer has-background-dark has-text-white" id="about-us">
+        <div class="content has-text-centered has-text-white">
           <p>
             <strong>Undecided?</strong> by: <a href="https://github.com/carissamero" target="_blank">Carissa Mero</a>,
             <a href="https://github.com/joehenrickson" target="_blank">Joe Henrickson</a>, 
