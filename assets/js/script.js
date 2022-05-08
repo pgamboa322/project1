@@ -1,50 +1,30 @@
-$.getJSON("https://api.watchmode.com/v1/list-titles/?apiKey=iz9NkyrVvBW1tKCzczoBIdy9CJB21p4ZR3moNFp0&source_ids=203,57", function(){
 
+var movieName = document.querySelector("#movie-title");
+var moviePoster = document.querySelector("#movie-poster");
+var movieButton = document.querySelector("#movieBtn");
+
+movieButton.addEventListener("click", () => {
+    movieSelector ();
 });
 
-
-var requestUrl = 'https://watchmode.p.rapidapi.com/list-titles/?types=movie&regions=US&source_types=sub%2Cfree&page=1,&limit=10&sort_by=titleasc&release_date_start=20010101&release_date_end=20220426', data;
-document.getElementById('fetchTitleBtn').addEventListener('click', requestData)
-
-
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Host': 'watchmode.p.rapidapi.com',
-		'X-RapidAPI-Key': '555d11ba4dmsh8b699aaadcb1a6ap1cb171jsn36d588927cd4'
-	}
-};
-
-function requestData (){
-fetch('https://watchmode.p.rapidapi.com/list-titles/?types=movie&regions=US&source_types=sub%2Cfree&page=1,&limit=10&sort_by=titleasc&release_date_start=20010101&release_date_end=20220426', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-
-}
-
-var movieChoice = options
-
-const points = [0,];
-
-for (let i = requestData.length -1; i > 0; i--) {
-  let j = Math.floor(Math.random() * i)
-  let k = points[i]
-  points[i] = points[j]
-  points[j] = k
-}
+var movieSelector
+fetch('https://api.themoviedb.org/3/movie/popular?api_key=645a5598111297428ddc7c021bbbf249&language=en-US&page=1')
+.then(function(data) {
+    return data.json()
 
 
- var movieTitle = document.createElement('p');
+.then(function(data) {
+    console.log(data);
+    var randomMovie = data.results[Math.floor(Math.random() * data.results.length)];
+    console.log(randomMovie);
+    var title = randomMovie.title.split(" ").join("");
+    var poster = randomMovie.poster_path.split(" ").join("");
+    movieName.textContent = randomMovie.title;
+    
+    
 
-movieTitle.textContent = "requestData";
+    console.log(title) 
 
-function displayTitle(data){
-    const title = data.titles[i];
-    const titleDiv = document.getElementById("movieChoice");
-}
+})
 
-
-
-  
-      
+})
